@@ -1,6 +1,8 @@
 
 import Foundation
+
 //Strong reference and weak reference
+
 //retain cycle how ARC handles
 
 class Passport {
@@ -18,11 +20,9 @@ class Passport {
 
 Passport(citizenship: "Bobby")
 
-
 var myPassPort: Passport? = Passport(citizenship: "Republic of Korea")
 
 myPassPort = nil
-
 
 class Human {
     var passport: Passport?
@@ -35,9 +35,7 @@ class Human {
     }
 }
 
-
 var bob: Human? = Human(name: "Bob Lee")
-
 
 myPassPort = nil
 bob = nil
@@ -175,19 +173,41 @@ newClassInstance.name = "Zana"
 
 ins.name
 
-func search<T: Equatable>(_ array:[T], _ elememt:T) -> Int
+func search<T: Equatable>(_ array:[T], _ elememt:T) -> Int?
 {
-    for (index, obje) in array.enumerated() where obje = elememt
+    for (index, obje) in array.enumerated() where obje == elememt
     {
         return index
     }
     return nil
 }
 
-let array = [12,15,25,18,19,25]
+let array = [12,15,25,18,19,25,19]
 
-search(array, 12)
+search(array, 19)
 
+struct HumanStruct {
+    var name: String
+    init(name: String) {
+        self.name = name
+    }
+}
+var structObject = HumanStruct(name: "Bob")
+
+structObject.name
+
+var newStructObject = structObject
+
+newStructObject.name = "Bobby"
+
+structObject.name
+
+let set:Set = [12,25,14,989,85]
+
+set.map { (value:Int) in
+    value*10
+    
+}
 
 
 
