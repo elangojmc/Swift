@@ -15,6 +15,9 @@ extension String {
     }
 }
 //MARK:- URL to Image
+//Elangovan added
+
+
 struct SAAddProductTemplate: Codable {
     let keyID: Int
     let keyName, displayName: String
