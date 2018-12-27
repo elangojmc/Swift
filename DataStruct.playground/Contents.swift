@@ -17,7 +17,7 @@ extension Array where Element: Comparable {
     }
 }
 
-let new = [10,25,36,85,14,10,22,36,14,88,22,88,99,88]
+let new = [10,25,36,85,14,10,22,36,14,88,22,88,99,88,100]
 
 new.sorted()
 
